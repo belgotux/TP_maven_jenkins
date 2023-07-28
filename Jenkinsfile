@@ -33,7 +33,7 @@ pipeline {
 
         stage('publish image docker hub') {
             steps {
-                ehco publish
+                echo 'publish'
             }
         }
     }
