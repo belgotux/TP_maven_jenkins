@@ -15,8 +15,9 @@ pipeline {
             steps {
                 script {
                     def APP_VER = sh(script: 'mvn help:evaluate -Dexpression=project.version -q -DforceStdout 2>/dev/null', returnStdout: true)
+                    sh "echo $APP_VER"
                 }
-                echo "version app : $APP_VER"
+                
             }
         }
         stage('Build image') {
