@@ -21,7 +21,7 @@ pipeline {
         }
         stage('Build image') {
             steps {
-                sh 'docker build -t ${env.APP_VER} --build-arg BUILD_VERSION=${env.APP_VER} .'
+                sh "docker build -t app1:$APP_VER --build-arg BUILD_VERSION=$APP_VER ."
             }
         }
             
