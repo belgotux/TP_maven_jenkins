@@ -1,7 +1,7 @@
+def APP_VER
 pipeline {
     agent any
     stages {
-        def APP_VER = null
         stage('Clean') {
             steps {
                 sh 'mvn -B -DskipTests clean'
